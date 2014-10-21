@@ -1,0 +1,24 @@
+span.child-target {
+    font-family: FontAwesome; /* use an icon font for the checkbox */    
+}
+input[type='checkbox'].child {     
+    position: relative;
+    left: -999em; /* hide the real checkbox */
+}
+
+input[type='checkbox'].child + span.child-target:after {
+    content: "\f096"; /* In fontawesome, is an open square (fa-square-o) */
+}
+input[type='checkbox'].child:checked + span.child-target:after {
+    content: "\f046"; /* fontawesome checked box (fa-check-square-o) */
+}
+
+/* ==== optional - colors and padding to make it look nice === */
+body { 
+    background-color: #2C3E50; 
+    color: #D35400; 
+}
+span.child { 
+    display: block;
+    padding: 0.5em;;
+}
